@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "queue": "ts-node-dev src/queue.ts",
-    "worker": "ts-node-dev src/worker.ts"
+    "worker": "ts-node-dev src/worker.ts",
+    "server": "ts-node-dev src/server.ts"
   },
   "keywords": [],
   "author": "",

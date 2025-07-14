@@ -10,9 +10,11 @@ const connection = new IORedis({
 const queue = new Queue('bme280', { connection });
 
 (async () => {
-  await queue.add('read-sensor', {
-    temperature: 23.4,
-    humidity: 58
+  await queue.add('read-sensor', {}, {
+    repeat: {
+      pattern: '0-23 * * * * *' // every minute
+    }
   });
-  console.log('📤 Zadanie dodane do kolejki');
 })();
+
+console.log('📤 Zadanie cykliczne dodane do kolejki');
