@@ -7,7 +7,7 @@ const app = express();
 const port = 3002;
 
 const redis = new IORedis({
-  host: 'localhost',
+  host: 'redis',
   port: 6379,
   maxRetriesPerRequest: null,
 });
